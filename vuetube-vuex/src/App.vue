@@ -1,9 +1,13 @@
 <template>
   <div id="app">
     <div id="top-bar">
-      <img id="logo" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="logo">
-      <h3 id="logo">VueTube</h3>
+      <div>
+
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="logo">
+        <h3 class="logo">VueTube</h3>
+      </div>
       <SearchBar @search-keyword="searchKeyword"/>
+      <span></span>
     </div>
     <!-- <ul>
       <button>고양이</button>
@@ -85,7 +89,15 @@ export default {
   margin-right: 50px;
 }
 
-#logo {
+#top-bar {
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.logo {
   width: auto;
   height: 25px;
   display: inline-block;
@@ -93,25 +105,25 @@ export default {
   margin: 0;
   padding-right: 5px;
   letter-spacing: -2px;
-}
-
-#top-bar {
-  margin-bottom: 30px;
+  flex: none;
 }
 
 input[type=text] {
   display: inline-block;
-  vertical-align: bottom;
-  margin-bottom: 3px;
-  margin-left: 250px;
-  width: 250px;
+  width: 200px;
   height: 15px;
   font-size: 10px;
   border-radius: 10px;
   border-style: solid;
   border-width: 1px;
-  padding-left: 10px;
 }
+
+.search-bar {
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: center;
+}
+
 
 .main-video {
   text-align: center;
@@ -146,6 +158,8 @@ input[type=text] {
 .description {
   font-size: small;
   margin-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .title { 
