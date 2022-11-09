@@ -1,6 +1,7 @@
 <template>
   <span>
     <input 
+      class="search-bar"
       type="text"
       v-model="keyword"
       @keyup.enter="searchKeyword"
